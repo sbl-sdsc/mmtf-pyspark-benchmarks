@@ -1,0 +1,5 @@
+key,cores,filter,filter_total,path,read,read_total
+Read_1_full.ipynb,1,,,../data/full,61.59717917442322,79.84085822105408
+Read_2_full.ipynb,2,,,../data/full,34.83975410461426,53.079649925231934
+Read_3_full.ipynb,3,,,../data/full,35.28443121910095,53.53756809234619
+Read_4_full.ipynb,4,,,../data/full,36.06357502937317,54.36367106437683

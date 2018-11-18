@@ -1,0 +1,11 @@
+name: benchmark 
+
+dependencies:
+  - python=3.6
+  - matplotlib=3.0.2
+  - numpy=1.15.4
+  - openjdk=8.0.152
+  - papermill=0.16.1
+  - watermark=1.6.1
+  - pip:
+      - git+https://github.com/sbl-sdsc/mmtf-pyspark.git#egg=mmtf-pyspark[complete]

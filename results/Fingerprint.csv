@@ -1,0 +1,5 @@
+key,cores,filter,filter_total,fingerprint,fingerprint_total,flatmap,flatmap_total,path,read,read_total
+Fingerprint_1_full.ipynb,1,,,154.36562204360962,172.56218004226685,,,../data/full,,
+Fingerprint_2_full.ipynb,2,,,85.63816404342651,103.8167233467102,,,../data/full,,
+Fingerprint_3_full.ipynb,3,,,88.33695197105408,106.63660478591919,,,../data/full,,
+Fingerprint_4_full.ipynb,4,,,90.05206108093262,108.38262295722961,,,../data/full,,
