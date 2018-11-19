@@ -1,11 +1,16 @@
 name: benchmark 
-
+channels:
+  - anaconda
+  - conda-forge
 dependencies:
-  - python=3.6
+  - python=3.7
   - matplotlib=3.0.2
   - numpy=1.15.4
   - openjdk=8.0.152
-  - papermill=0.16.1
+  - papermill=0.14.2
+  - pyarrow=0.11.1
+  - psutil=5.4.8
+  - pyspark=2.4.0
   - watermark=1.6.1
   - pip:
       - git+https://github.com/sbl-sdsc/mmtf-pyspark.git#egg=mmtf-pyspark[complete]
