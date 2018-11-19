@@ -4,14 +4,16 @@ channels:
   - conda-forge
 dependencies:
   - python=3.7
-  - matplotlib=3.0.2
-  - numpy=1.15.4
-  - openjdk=8.0.152
-  - papermill=0.14.2
-  - pyarrow=0.11.1
-  - psutil=5.4.8
-  - pyspark=2.4.0
-  - watermark=1.6.1
+  - biopython==1.72 
+  - matplotlib==3.0.2
+  - numpy==1.15.4
+  - openjdk==8.0.152
+  - papermill==0.14.2
+  - pyarrow==0.11.1
+  - psutil==5.4.8
+  - pyspark==2.4.0
+  - py4j==0.10.7
+  - watermark==1.6.1
   - pip
   - pip:
       - mmtfPyspark==0.2.6 
