@@ -12,5 +12,6 @@ dependencies:
   - psutil=5.4.8
   - pyspark=2.4.0
   - watermark=1.6.1
+  - pip
   - pip:
-      - git+https://github.com/sbl-sdsc/mmtf-pyspark.git#egg=mmtf-pyspark[complete]
+      - mmtfPyspark==0.2.6 
