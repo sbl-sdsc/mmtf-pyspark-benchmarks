@@ -14,4 +14,5 @@ dependencies:
   - watermark==1.6.1
   - pip
   - pip:
-      - git+https://github.com/sbl-sdsc/mmtf-pyspark.git#egg=mmtf-pyspark[complete] 
+      - mmtfPyspark==0.2.7
+
