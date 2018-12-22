@@ -14,5 +14,6 @@ dependencies:
   - watermark==1.6.1
   - pip
   - pip:
+      - msgpack==0.5.6
       - mmtfPyspark==0.2.7
 
