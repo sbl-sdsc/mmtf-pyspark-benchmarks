@@ -1,6 +1,0 @@
-key,cores,filter,filter_total,fingerprint,fingerprint_total,flatmap,flatmap_total,path,read,read_total
-Filter_1_full.ipynb,1,1323.1527738571167,1341.4743809700012,,,,,../data/full,,
-Filter_2_full.ipynb,2,696.475280046463,714.8535978794098,,,,,../data/full,,
-Filter_3_full.ipynb,3,512.4753308296204,531.1066980361938,,,,,../data/full,,
-Filter_4_full.ipynb,4,419.3207278251648,437.89833402633667,,,,,../data/full,,
-Filter_8_full.ipynb,8,367.79772186279297,386.2894549369812,,,,,../data/full,,
