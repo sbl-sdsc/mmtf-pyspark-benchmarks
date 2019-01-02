@@ -37,6 +37,18 @@ Anytime you want to use the environment, activate it again and start Jupyter Not
 ```conda remove --name benchmark --all```
 
 
+#### Setting Spark Options 
+When running PySpark on many cores, the memory for the Spark Driver and Workers may need to be increased. If necessary, set the environmental variable `SPARK_CONF_DIR` to the conf directory provided in this repository in your .bashrc (Linux) or .bash_profile (Mac) file.
+
+```export SPARK_CONF_DIR=<path>/conf```
+
+The conf directory contains a file spark-env.sh. In the provided file, used on a 24 core machine, the following properties were set:
+
+```
+SPARK_DRIVER_MEMORY=20G
+SPARK_WORKER_MEMORY=20G
+```
+
 ## Run Benchmarks
 
 The benchmarks compare:
