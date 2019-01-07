@@ -19,9 +19,9 @@
 
 # This file is sourced when running various Spark programs.
 # Copy it as spark-env.sh and edit that to configure Spark for your site.
-########  Spark settings used on Jetstream for running on 24 cores
-SPARK_DRIVER_MEMORY=20G
-SPARK_WORKER_MEMORY=20G
+################ Adjust the following two memory settings, e.g., 4GB for 8 cores, 20 GB for 24 cores.
+SPARK_DRIVER_MEMORY=4G
+SPARK_WORKER_MEMORY=4G
 ########
 # Options read when launching programs locally with
 # ./bin/run-example or ./bin/spark-submit
