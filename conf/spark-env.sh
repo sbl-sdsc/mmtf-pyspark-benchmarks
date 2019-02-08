@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
-
 #
 # Licensed to the Apache Software Foundation (ASF) under one or more
 # contributor license agreements.  See the NOTICE file distributed with
@@ -16,25 +15,22 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
-
 # This file is sourced when running various Spark programs.
 # Copy it as spark-env.sh and edit that to configure Spark for your site.
 ################ Adjust the following two memory settings, e.g., 4GB for 8 cores, 20 GB for 24 cores.
-SPARK_DRIVER_MEMORY=4G
-SPARK_WORKER_MEMORY=4G
+#SPARK_DRIVER_MEMORY=4G
+#SPARK_WORKER_MEMORY=4G
 ########
 # Options read when launching programs locally with
 # ./bin/run-example or ./bin/spark-submit
 # - HADOOP_CONF_DIR, to point Spark towards Hadoop configuration files
 # - SPARK_LOCAL_IP, to set the IP address Spark binds to on this node
 # - SPARK_PUBLIC_DNS, to set the public dns name of the driver program
-
 # Options read by executors and drivers running inside the cluster
 # - SPARK_LOCAL_IP, to set the IP address Spark binds to on this node
 # - SPARK_PUBLIC_DNS, to set the public DNS name of the driver program
 # - SPARK_LOCAL_DIRS, storage directories to use on this node for shuffle and RDD data
 # - MESOS_NATIVE_JAVA_LIBRARY, to point to your libmesos.so if you use Mesos
-
 # Options read in YARN client/cluster mode
 # - SPARK_CONF_DIR, Alternate conf dir. (Default: ${SPARK_HOME}/conf)
 # - HADOOP_CONF_DIR, to point Spark towards Hadoop configuration files
@@ -57,7 +53,6 @@ SPARK_WORKER_MEMORY=4G
 # - SPARK_DAEMON_JAVA_OPTS, to set config properties for all daemons (e.g. "-Dx=y")
 # - SPARK_DAEMON_CLASSPATH, to set the classpath for all daemons
 # - SPARK_PUBLIC_DNS, to set the public dns name of the master or workers
-
 # Generic options for the daemons used in the standalone deploy mode
 # - SPARK_CONF_DIR      Alternate conf dir. (Default: ${SPARK_HOME}/conf)
 # - SPARK_LOG_DIR       Where log files are stored.  (Default: ${SPARK_HOME}/logs)
@@ -69,3 +64,5 @@ SPARK_WORKER_MEMORY=4G
 # You might get better performance to enable these options if using native BLAS (see SPARK-21305).
 # MKL_NUM_THREADS=1        Disable multi-threading of Intel MKL
 # OPENBLAS_NUM_THREADS=1   Disable multi-threading of OpenBLAS
+#MKL_NUM_THREADS=2
+#OPENBLAS_NUM_THREADS=2
