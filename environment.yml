@@ -9,9 +9,6 @@ dependencies:
   - openjdk==8.0.152
   - pyspark==2.3.2
   - biopython==1.72
-  - papermill==0.14.2
-  - psutil==5.4.8
-  - watermark==1.6.1
   - pip
   - pip:
       - git+https://github.com/sbl-sdsc/mmtf-pyspark.git 

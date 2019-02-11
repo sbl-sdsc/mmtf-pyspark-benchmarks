@@ -36,28 +36,39 @@ Anytime you want to use the environment, activate it again and start Jupyter Not
 
 ```conda remove --name benchmark --all```
 
+#### Download MMTF Hadoop Sequence File
+Download the entire PDB as an [MMTF Hadoop Sequence File](http://mmtf.rcsb.org/download.html)
 
-#### Setting Spark Options 
-When running PySpark on many cores, the memory for the Spark Driver and Workers may need to be increased. If necessary, set the environmental variable `SPARK_CONF_DIR` to the conf directory provided in this repository in your .bashrc (Linux) or .bash_profile (Mac) file.
+```curl -O https://mmtf.rcsb.org/v1.0/hadoopfiles/full.tar```
 
-```export SPARK_CONF_DIR=<path>/conf```
+```tar -xvf full.tar```
 
-The conf directory contains a file spark-env.sh. In the provided file, used on a 24 core machine, the following properties were set:
+Then set the MMTF_FULL environment variable
 
-```
-SPARK_DRIVER_MEMORY=20G
-SPARK_WORKER_MEMORY=20G
-```
+```export MMTF_FULL=<path>/full```
+
+#### Set Spark Options 
+When running PySpark on many cores, it may run out of memory on the Spark Driver (default 1GB). If necessary, set the environmental variable in the .bashrc (Linux) or .bash_profile (Mac) file.
+
+
+```export SPARK_DRIVER_MEMORY=16G```
 
 ## Run Benchmarks
 
 The benchmarks compare:
-1. Reading the whole PDB from a Hadoop Sequence File (baseline benchmark)
-2. Finding Zinc interactions in the PDB 
+1. Reading the whole PDB from an MMTF Hadoop Sequence File (baseline benchmark)
+2. Tabulating zinc interactions in the PDB 
+3. Tabulating salt-bridge interactions in the PDB 
 
-The benchmarks are run on 1, 2, 3, 4xn (n = 1, maxcores/4). maxcores is the maximum number of logical cores on a machine. The number of physical cores may be less if hyperthreading is enabled.
+To run the benchmark, set the number of cores in cell 3 of RunBenchmarks.ipynb, e.g. on 24 cores: 
 
-1. [DownloadFiles.ipynb](notebooks/DownloadFiles.ipynb) (download PDB Hadoop Sequence file and setup directories)
-2. [BenchmarkRead.ipynb](notebooks/BenchmarkRead.ipynb) (read PDB Hadoop Sequence file)
-4. [BenchmarkInteractions.ipynb](notebooks/BenchmarkInteractions.ipynb) (find Zinc interactions)
-5. [PlotResults.ipynb](notebooks/PlotResults.ipynb) (plot results)
+```
+cores = [24, 20, 16, 12, 8, 4, 2, 1]
+```
+
+The benchmarks are typically run on 1, 2, 4xn (n = 1, maxcores/4). maxcores is the maximum number of logical cores on a machine. The number of physical cores may be less if hyperthreading is enabled.
+
+1. [PrintSettings.ipynb](notebooks/PrintSettings.ipynb) (prints Spark settings, e.g., SPARK_DRIVER_MEMORY)
+2. [RunBenchmarks.ipynb](notebooks/RunBenchmarks.ipynb) (runs all benchmarks)
+4. [PlotReadResults.ipynb](notebooks/PlotReadResults.ipynb) (plots benchmark results for reading MMTF Hadoop Sequence Files)
+5. [PlotCalculation.ipynb](notebooks/PlotCalculationResults.ipynb) (plots benchmark results for performing calculations using MMTF Hadoop Sequence Files)
